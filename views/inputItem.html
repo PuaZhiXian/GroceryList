@@ -1,0 +1,31 @@
+<div class="col-xs-12 ">
+    <div class="jumbotron text-center">
+        <h1>Add Item Below</h1>
+    </div>
+    <form name="GroceryForm">
+
+        <div class="alert alert-danger" role="alert" ng-show="GroceryForm.$dirty && !GroceryForm.$valid">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            Enter a valid grocery item!
+        </div>
+        <div class="form-group">
+            <input type="text" ng-pattern="myRegex"  class="form-control" placeholder="Grocery Item" ng-model="groceryItem.itemName" required>
+        </div>
+
+        <div class="form-group">
+            <button href="#!" class="btn btn-success btn-block btn-lg" ng-click="GroceryForm.$valid && saveItem()">
+                <span class="glyphicon glyphicon-pushpin"></span>
+                <span>Save</span>
+            </button>
+        </div>
+
+        <div class="form-group">
+            <a href="#!" class="btn btn-default btn-block btn-lg">
+                <span class="glyphicon glyphicon-remove"></span>
+                <span >Cancel</span>
+            </a>
+        </div>
+    </form>
+
+</div>
